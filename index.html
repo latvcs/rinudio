@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rinudio</title>
+
+<style>
+:root{
+    --bg:#111;
+    --panel:#1a1a1a;
+    --panel2:#222;
+    --border:#555;
+    --text:#e5e5e5;
+    --accent:#d94545;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    line-height:1.6;
+}
+
+.hero{
+    position:relative;
+    height:500px;
+    overflow:hidden;
+    border-bottom:6px solid var(--accent);
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:250px;
+    background:linear-gradient(
+        to bottom,
+        rgba(17,17,17,0) 0%,
+        rgba(17,17,17,1) 100%
+    );
+}
+
+.hero-content{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    z-index:2;
+    width:90%;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    letter-spacing:6px;
+    text-transform:uppercase;
+    text-shadow:4px 4px 0 #000;
+}
+
+.hero-content p{
+    margin-top:10px;
+    font-size:1.2rem;
+    color:#ccc;
+}
+
+nav{
+    background:#0d0d0d;
+    border-bottom:4px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    list-style:none;
+}
+
+nav a{
+    display:block;
+    padding:18px 28px;
+    color:white;
+    text-decoration:none;
+    border-right:2px solid #333;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+
+nav a:hover{
+    background:var(--accent);
+}
+
+.container{
+    width:min(1100px, 95%);
+    margin:auto;
+    padding:40px 0;
+}
+
+.section-title{
+    margin-bottom:20px;
+    padding:12px;
+    background:var(--panel2);
+    border-left:8px solid var(--accent);
+    text-transform:uppercase;
+}
+
+.game-highlight{
+    background:var(--panel);
+    border:3px solid var(--border);
+    padding:30px;
+    margin-bottom:50px;
+}
+
+.game-highlight h2{
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    margin-top:25px;
+}
+
+.feature{
+    background:var(--panel2);
+    border:2px solid var(--border);
+    padding:18px;
+}
+
+.feature h3{
+    margin-bottom:8px;
+    color:#fff;
+}
+
+.article{
+    background:var(--panel);
+    border:3px solid var(--border);
+    margin-bottom:40px;
+    overflow:hidden;
+}
+
+.article img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    display:block;
+    border-bottom:3px solid var(--border);
+}
+
+.article-content{
+    padding:25px;
+}
+
+.article h2{
+    margin-bottom:15px;
+    text-transform:uppercase;
+}
+
+.placeholder{
+    color:#aaa;
+    font-style:italic;
+}
+
+footer{
+    margin-top:50px;
+    text-align:center;
+    padding:30px;
+    background:#0d0d0d;
+    border-top:4px solid var(--accent);
+}
+
+.pixel-box{
+    border:4px solid var(--border);
+    box-shadow:
+        6px 6px 0 rgba(0,0,0,0.5);
+}
+
+@media (max-width:700px){
+    .hero-content h1{
+        font-size:2.5rem;
+    }
+
+    .hero{
+        height:350px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+    <img src="media/picture1.png" alt="Rinudio banner">
+    <div class="hero-content">
+        <h1>Rinudio</h1>
+        <p>Creating worlds worth fighting for since 2018</p>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#intervention">INTERVENTION</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#calltoarms">A Call to Arms: A cancelled masterpiece</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+
+    <section class="game-highlight pixel-box">
+        <h2>INTERVENTION</h2>
+        <p>
+            Rinudio's latest title currently in development.
+            A modern military FPS inspired by the classics,
+            featuring intense combat, large-scale content,
+            extensive modding support, and a massive arsenal.
+        </p>
+
+        <div class="feature-grid">
+
+            <div class="feature">
+                <h3>6 Game Modes</h3>
+                <p>Multiple ways to play and compete. You can always find a fresh lobby. Queue up for specific modes or jump right into quick play.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Large Map Pool</h3>
+                <p>Battle across a wide variety of environments.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Great Porting support</h3>
+                <p>
+                    Supports Valve .VMF maps, Unity imports,
+                    Doom .WAD files, and even Minecraft worlds.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>Modern Graphics</h3>
+                <p>Detailed visuals and immersive environments. You will always find good camping spots and spots where you blend into quite well.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Huge Arsenal</h3>
+                <p>Choose from a MASSIVE selection of weapons, all of them made with love by Jack with Alex's help</p>
+            </div>
+
+            <div class="feature">
+                <h3>Community Creation</h3>
+                <p>Built by gamers and modders, for gamers and modders, we support beginner-friendly tools for mapping.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Key Request</h3>
+                <p>Email us at rinudiosupport@outlook.com to request a key for testing purposes, please link all of your socials for a background check.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <h2 class="section-title">Articles</h2>
+
+    <article id="intervention" class="article pixel-box">
+        <img src="media/picture2.png" alt="INTERVENTION">
+        <div class="article-content">
+            <h2>INTERVENTION</h2>
+            <p class="placeholder">
+                Intervention is one of our first ever titles that actually went into testing, unless you count A CALL TO ARMS that didn't make it into the testing stage, this is the game we have been working on for the longest time
+                Featuring fabulous graphics, a wide variety of weapons, beginner-friendly Map Creation, 6 gamemodes to choose from, it rivals big shooters like COD and CS2
+                We have been working on Intervention since 2022, and testing has been out since 2024, grab your keys boys!
+                This game also features hosting servers, you can download a 20GB file to host a server on the server browser, you must Login using RINU ID however.
+                LAN also should work with little to zero ping on an average home network but we mostly stay on Peer 2 Peer servers for Matchmaking.
+                Did I mention matchmaking? Yes, this game features matchmaking, our peak was 120 testers playing at once, every person counts
+                Why haven't you heard of this game? We do not hire big youtubers, only friends of friends, but this game is staying key-only till 2029, yes, 3 years from
+                when I am writing this.
+                We hope to see you out there on the battlefield, capturing hostages or guarding hostages. - Article written by Jack
+            </p>
+        </div>
+    </article>
+
+    <article id="about" class="article pixel-box">
+        <img src="media/picture3.png" alt="About Rinudio">
+        <div class="article-content">
+            <h2>About Us</h2>
+            <p class="placeholder">
+                Our team consists of 6 friends, scattered throughout the world.
+                Brandon "finebrandy" Steele - Level Design, Programming, Horizon-Based Ambient Occlusion Fix
+                Jack "andrei" Evefjord - Texturing, Programming Help, Testing, Most of the guns, and most importantly, pays everybody.
+                Haruto "n3k0" Nakamura - Screen Space Ambient Occlusion Fix and a lot more shader-help
+                Johnathan "vluxo" Xhao - Shaders with n3k0/Haruto, Contributions with the HBAO fix, Level Design
+                Bella "Belli" Sundell  - Level Design, Touch-ups and Tweaks, and the teams mood-keeper
+                Alex "source" Steele   - Some of the guns, Level Design, Texturing
+                Together, even if we don't share the same town, home, school, we can still make entertainment media.
+                - Article written by Jack Evefjord
+            </p>
+        </div>
+    </article>
+
+    <article id="calltoarms" class="article pixel-box">
+        <img src="media/picture4.png" alt="Call to Arms">
+        <div class="article-content">
+            <h2>A CALL TO ARMS: A Cancelled Masterpiece</h2>
+            <p class="placeholder">
+                "The first game we ever worked on, but it was too ambitious, we always wanted to come back to it but
+                it was more of a War Thunder Clone" - says Brandon "finebrandy" Steele
+                This game went pretty far into production but it was simply too ambitious at the time
+                It was meant to be a tank game, with air-battles added into it, we were trying to be a better
+                war-thunder. The problem with it was we just could not figure out the vehicle physics.
+                "Which is better? A shitty tank you can't control whatsoever and doesn't adapt to it's terrain or one that is quite the opposite?"
+                says Bella Sundell.
+                - Article written by Johnathan "vluxo" Xhao
+            </p>
+        </div>
+    </article>
+
+</main>
+
+<footer>
+    <p>© Rinudio 2026, All rights reserved. Site by Jack Evefjord</p>
+</footer>
+
+</body>
+</html>
